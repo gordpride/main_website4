@@ -1,31 +1,44 @@
-<!DOCTYPE html>
-<html lang="">
+<!doctype html>
+<html lang="en">
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <title>3 Column Layout</title>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Test_Website</title>
     <link rel="stylesheet" href="assets/css/layout.css">
+    <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
+
 <div>
     <header class="header"><p>Starbucks</p></header>
     <img style="position:absolute; margin-left: 1275px; left:10px;top:10px;" src="assets/img/header.png" alt="а" width="52" height="52">
 </div>
+
 <div class="container">
     <main class="center column">
         <article>
-            <h1>Media content</h1>
-            <p>
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/eylcZr7o0zs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                <br>
-                <audio controls>
-                    <source src="public/JACKBOYS, Travis Scott - OUT WEST.mp3" type="audio/ogg">
-                    <source src="public/JACKBOYS, Travis Scott - OUT WEST.mp3" type="audio/mpeg">
-                    does not support the audio element.
-                </audio>
+            <h1>Canvas</h1>
+            <p></p>
+            <canvas id="draw" >
+                <script>
 
-            </p>
+                    window.onload = function(){
+                        canvas('#draw', {
+                            width: 500,
+                            height: 300,
+                            strokeWidth: 5,
+                            strokeColor: "#df4b26"
+                        })
+                    }
+                </script>
+            </canvas>
+            <div class="toolbar" id="toolbar">
+            </div>
         </article>
     </main>
+
     <nav class="left column">
         <h3></h3>
         <ul>
@@ -51,19 +64,24 @@
         <ul>
             <li><a href="table.html">Table</a></li>
         </ul>
+        <h3></h3>
         <ul>
             <li><a href="paint.html">Canvas</a></li>
         </ul>
+
     </nav>
+
     <div class="right column">
         <h3>Right heading</h3>
         <p></p>
     </div>
-    <div class="push"></div>
 </div>
-<div class="footer-wrapper">
-    <footer class="footer"><p>Starbucks, by EpsonPride</p></footer>
+<div>
+    <header class="header"><p>Starbucks</p></header>
     <img style="position:absolute; margin-left: 1275px; left:10px;top:10px;" src="assets/img/header.png" alt="а" width="52" height="52">
 </div>
+
+<script src="assets/js/paint.js"></script>
+<script src="assets/js/canvas.js"></script>
 </body>
 </html>
